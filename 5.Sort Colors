@@ -1,0 +1,28 @@
+#include <bits/stdc++.h> 
+void sort012(int *nums, int n)
+{
+  
+        
+        
+        int zeroes=0,twos=n-1,ones=0;
+        while(ones<=twos)
+        {
+            if(nums[ones]==2)
+            {
+             swap(nums[ones],nums[twos]);
+                twos--;
+            }
+             else  if(nums[ones]==1)
+            {
+                ones++;
+                
+            }
+            else if(nums[ones]==0)
+            {
+                   swap(nums[zeroes],nums[ones]);
+                   zeroes++;
+                ones++;
+            }
+        }
+    }
+ 
