@@ -1,0 +1,32 @@
+#include <bits/stdc++.h> 
+#include <vector>
+
+bool findTargetInMatrix(vector < vector < int >> & matrix, int m, int n, int target) {
+    
+    
+         
+        int high=m*n -1,mid,low=0;
+        while(low<=high)
+        {
+            mid=(low+high)/2;
+
+            
+            if(matrix[mid/n][mid%n]==target)
+            {
+                return true;
+
+            }
+            else if(matrix[mid/n][mid%n]<target)
+            {
+                low=mid+1;
+
+            }
+            else
+            {
+                high=mid-1;
+            }
+        }
+            
+        return false;
+    
+}
