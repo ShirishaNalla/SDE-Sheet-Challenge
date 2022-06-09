@@ -1,7 +1,6 @@
-class Solution {
-public:
-    int findDuplicate(vector<int>& nums) {
-        int i,n=nums.size();
+#include <bits/stdc++.h> 
+int findDuplicate(vector<int> &nums, int n){
+        int i;
         
         for(i=0;i<n;i++)
         {
@@ -19,6 +18,4 @@ public:
         }
                     return  nums.size() ;
 
-    } 
-    
-};
+}
