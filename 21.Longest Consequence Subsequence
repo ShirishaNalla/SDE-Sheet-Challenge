@@ -1,0 +1,36 @@
+#include <bits/stdc++.h> 
+int lengthOfLongestConsecutiveSequence(vector<int> &nums, int n) {
+       if(n==0)
+        {
+            return 0;
+
+        }
+        int count=1;int max=1;
+        unordered_set<int>hset;
+        for(int num:nums)
+        {
+            hset.insert(num);
+
+       }
+        for(int num:nums)
+        {
+            if(hset.count(num-1))
+        {
+                continue;
+        }
+            while(hset.count(num+1))
+            {
+                count++;
+                if(max<count)
+                {
+                    max=count;
+                }
+                num++;
+            }
+            
+                count=1;
+        }
+        return max;
+                  
+          // Write your code here.
+}
